@@ -19,9 +19,9 @@ def eigvalsh_value(A):
 def eig(A, eig_call):
     A_laplace = define_laplacian(A)
     switcher = { 
-        "eig": eig_value(A), 
-        "eigh": eigh_value(A), 
-        "eigvals": eigvals_value(A), 
-        "eigvalsh": eigvalsh_value(A)
+        "eig": eig_value(A_laplace), 
+        "eigh": eigh_value(A_laplace), 
+        "eigvals": eigvals_value(A_laplace), 
+        "eigvalsh": eigvalsh_value(A_laplace)
     }
-    return switcher.get(eig_call, eig_value(A))
+    return switcher.get(eig_call, eig_value(A_laplace))
