@@ -1,6 +1,6 @@
 import random
 
-def generate(Z1):
+def generate_positive(Z1):
     i = 0
     while i < len(Z1)-1:
         j = i+1
@@ -28,3 +28,20 @@ def generate(Z1):
             k+=1
         i+=1
     return Z1
+
+def generate_negative(Z1):
+    #i defines current row being iterated in a matrix
+    i = 0
+    while i < len(Z1):
+        #j defines current column being iterated in a matrix. j is always greater than i because we only care about upper half of the Adj matrix
+        j = i+1
+        #j(column count) should run till last element
+        while j < len(Z1):
+            random_value = random.randint(0, 1)
+            Z1[i, j] = random_value
+            #updating lower half of Adj matrix as soon as upper half element is edited
+            Z1[j, i] = random_value
+            #before exiting a row iteration, this makes sure that the diagonal element is set to 0
+            Z1[i, i] = 0
+            j+=1
+        i+=1
