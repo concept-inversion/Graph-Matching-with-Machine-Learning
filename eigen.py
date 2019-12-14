@@ -5,7 +5,6 @@ def define_laplacian(A):
     return nx.laplacian_matrix(A)
 
 def eig_value(A):
-    import ipdb; ipdb.set_trace()
     return LA.eig(A)
 
 def eigh_value(A):
