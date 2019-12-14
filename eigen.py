@@ -5,6 +5,7 @@ def define_laplacian(A):
     return nx.laplacian_matrix(A)
 
 def eig_value(A):
+    import ipdb; ipdb.set_trace()
     return LA.eig(A)
 
 def eigh_value(A):
@@ -18,6 +19,7 @@ def eigvalsh_value(A):
 
 def eig(A, eig_call):
     A_laplace = define_laplacian(A)
+    A_laplace = A_laplace.todense()
     switcher = { 
         "eig": eig_value(A_laplace), 
         "eigh": eigh_value(A_laplace), 
