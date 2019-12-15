@@ -17,3 +17,5 @@ Files:
 7. process_data.py: Has code to get the DD.mat file from datasets/ folder and get the adjacency matrix from a list of adjacency matrices based on passed index.
 
 8. test.py: This file is used to test on real datasets, i.e. DD.mat. It has a method that tests the original matrix chosen by calling process_data.py with other positive and negative matches by generating these positive and negative matches and hence finding distance metrics.
+
+9. similarity_algorithms.py: Has functions that can be used to calculate Euclidean, Minkowski, and Manhattan distances, given two eigen vectors.
