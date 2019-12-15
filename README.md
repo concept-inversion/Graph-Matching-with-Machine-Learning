@@ -19,3 +19,14 @@ Files:
 8. test.py: This file is used to test on real datasets, i.e. DD.mat. It has a method that tests the original matrix chosen by calling process_data.py with other positive and negative matches by generating these positive and negative matches and hence finding distance metrics.
 
 9. similarity_algorithms.py: Has functions that can be used to calculate Euclidean, Minkowski, and Manhattan distances, given two eigen vectors.
+
+Steps to run custom graphs with 5, 7 and 12 nodes:
+1. Go to file five_node_test.ipynb or seven_node_test.ipynb or twelve_node_ipynb in your IDE like VS code.
+2. Click on first cell.
+3. Click on "Run cell and below".
+Scroll down and see all results.
+
+Steps to run real datasets from DD.mat:
+1. Go to file test.py on your IDE.
+2. Run command "python test.py" in terminal to run the code.
+This file reads DD.mat's adjacency matrix of index "x" defined in code, then creates 20 positive/negative adjacency matrices based on original matrix and tests different distance metrics of original matrix with all other generated matrices. Comment/uncomment line #25/#26 to generate positive/negative matrices for comparision.
