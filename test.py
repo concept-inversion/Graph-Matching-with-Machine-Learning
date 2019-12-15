@@ -8,7 +8,7 @@ from similarity_algorithms import euclidean_distance
 from scipy.spatial import distance
 
 
-def positive_samples_test():
+def positive_negative_samples_test():
     Z = []
     #sample number in DD.mat dataset
     x = 2
@@ -23,7 +23,7 @@ def positive_samples_test():
     while j < 20:
         #generate negative/positive samples and modify the Z[j] matrix
         #generate_negative(Z[j])
-        generate_negative(Z[j])
+        generate_positive(Z[j])
         j+=1
 
     i = 0
@@ -46,4 +46,4 @@ def positive_samples_test():
         print('Variation {} - {}'.format(j, distance.minkowski(lap1,lap2)))
         j+=1
 
-positive_samples_test()
+positive_negative_samples_test()
